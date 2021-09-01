@@ -1,4 +1,4 @@
-export default function leaderBoard() {
+let leaderBoard = () => {
   const scores = [
     { name: 'Elyor', score: 100 },
     { name: 'Henry', score: 100 },
@@ -76,3 +76,5 @@ export default function leaderBoard() {
 
   return container;
 }
+
+export default leaderBoard;
