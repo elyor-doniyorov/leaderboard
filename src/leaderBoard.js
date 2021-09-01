@@ -39,8 +39,6 @@ export default function leaderBoard() {
   scoresdiv.appendChild(scoreList);
   leaderboard.appendChild(scoresdiv);
 
-  
-
   const addScore = document.createElement('div');
   addScore.className = 'add-score';
   const addScoreTitle = document.createElement('h2');
