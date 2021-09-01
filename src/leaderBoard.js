@@ -1,4 +1,4 @@
-let leaderBoard = () => {
+const leaderBoard = () => {
   const scores = [
     { name: 'Elyor', score: 100 },
     { name: 'Henry', score: 100 },
@@ -75,6 +75,6 @@ let leaderBoard = () => {
   container.appendChild(leaderboard);
 
   return container;
-}
+};
 
 export default leaderBoard;
