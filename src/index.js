@@ -8,7 +8,7 @@ root.appendChild(board);
 
 const game = new Board();
 
-async function startGame() {
+let startGame = async () => {
   await game.createGame('my cool game');
 }
 startGame();
