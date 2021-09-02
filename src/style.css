@@ -3,7 +3,8 @@
   margin: auto;
   padding: 20px;
   margin-top: 100px;
-  background-color: lightgray;
+  background-color: rgb(233, 230, 230);
+  border-radius: 5px;
 }
 
 button, li , input, #addscorebtn {
