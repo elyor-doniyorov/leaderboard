@@ -3,7 +3,11 @@
   margin: auto;
   padding: 20px;
   margin-top: 100px;
-  background-color: #fff0e0;
+  background-color: lightgray;
+}
+
+button, li , input, #addscorebtn {
+  font-weight: bolder;
 }
 
 .container > h1 {
@@ -58,4 +62,33 @@ input[type="text"] {
 input[type="button"] {
   float: right;
   padding: 5px 15px;
+}
+
+
+.errorDiv,
+.submitDivErr {
+  color: red;
+}
+
+#refreshbtn,
+input[type="button"] {
+  color: rgb(2, 2, 2);
+  margin-right: 20%;
+  float: right;
+  box-shadow: 3px 3px black;
+}
+
+#addscorebtn {
+  margin-right:0;
+}
+
+@media (max-width: 417px) {
+  .leaderboard {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .list-scores ul {
+    width: 100%;
+  }
 }

@@ -3,11 +3,12 @@ export default class Board {
     this.id = null;
     this.flag = true;
   }
+
   async setId(id) {
     let tokenId = id.result.substring(id.result.indexOf(':'));
     tokenId = tokenId.substring(
       tokenId.lastIndexOf(':') + 1,
-      tokenId.lastIndexOf(' ')
+      tokenId.lastIndexOf(' '),
     );
     this.id = tokenId;
   }
@@ -31,6 +32,7 @@ export default class Board {
       this.setId(response);
     }
   };
+  
   displayScores = async () => {
     if (this.id !== null) {
       const scoresList = document.getElementById('ulList');

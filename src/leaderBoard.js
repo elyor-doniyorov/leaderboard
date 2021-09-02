@@ -80,6 +80,6 @@ const leaderBoard = () => {
   leaderboard.appendChild(addScore);
   container.appendChild(leaderboard);
   return container;
-}
+};
 
 export default leaderBoard;

@@ -6,7 +6,7 @@ const board = leaderBoard();
 const root = document.getElementById('root');
 root.appendChild(board);
 
-const game = new LeaderBoard();
+const game = new Board();
 
 async function startGame() {
   await game.createGame('my cool game');
