@@ -1,0 +1,72 @@
+.container {
+  width: 70%;
+  margin: auto;
+  border: 1px solid black;
+  padding: 25px;
+  border-radius: 10px;
+  margin-top: 100px;
+}
+
+.leaderboard {
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+
+.refresh {
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+
+#refresh-btn {
+  margin-top: 25px;
+}
+
+.scoreList ul {
+  border: 2px solid black;
+  list-style-type: none;
+  width: 80%;
+  padding: 0;
+}
+
+.addScore-title {
+  margin-bottom: 40px;
+}
+
+.scoreList li:nth-child(odd) {
+  padding: 5px;
+  background-color: lightgrey;
+}
+
+.scoreList li:nth-child(even) {
+  padding: 5px;
+  background-color: white;
+}
+
+.addScore {
+  padding-right: 10px;
+}
+
+.addScore h2 {
+  margin-top: 0;
+}
+
+.addForm div {
+  margin-bottom: 30px;
+}
+
+input[type="text"] {
+  padding: 8px 0;
+  width: 60%;
+  margin-bottom: 10px;
+}
+
+input[type="submit"] {
+  margin-top: 8px;
+  float: right;
+  padding: 5px 15px;
+}
+
+#submit {
+  float: right;
+  margin-right: 40%;
+}
