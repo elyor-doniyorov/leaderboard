@@ -26,7 +26,7 @@ export default class Board {
       document.getElementById('errorDiv').textContent = 'Bad Request, Please Try Again!!!';
       setTimeout(() => {
         document.getElementById('errorDiv').innerHTML = '';
-      }, 3000);
+      }, 2000);
     } else {
       this.setId(response);
     }
@@ -59,7 +59,7 @@ export default class Board {
       document.querySelector('.submitDivErr').textContent = 'Please provide a value for game name and score';
       setTimeout(() => {
         document.querySelector('.submitDivErr').innerHTML = '';
-      }, 1500);
+      }, 1000);
       return false;
     }
     if (this.id !== null) {
