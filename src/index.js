@@ -8,9 +8,9 @@ root.appendChild(board);
 
 const game = new Board();
 
-let startGame = async () => {
+const startGame = async () => {
   await game.createGame('my cool game');
-}
+};
 startGame();
 
 document.getElementById('refreshbtn').addEventListener('click', () => {
