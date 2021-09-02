@@ -1,3 +1,4 @@
+/* eslint-disable no-trailing-spaces, comma-dangle */
 export default class Board {
   constructor() {
     this.id = null;
@@ -98,3 +99,4 @@ export default class Board {
     return response;
   };
 }
+/* eslint-enable no-trailing-spaces, comma-dangle */
