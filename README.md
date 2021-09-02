@@ -16,7 +16,7 @@ Additional description of the project and its features.
 
 ## Live Demo
 
-[live demo](https://rawcdn.githack.com/elyor-doniyorov/leaderboard/6c264ecadc9545dfa5bf3d97ea17b2e417218f44/dist/index.html)
+[live demo](https://rawcdn.githack.com/elyor-doniyorov/leaderboard/04136cc7240163c17c24d5f143b8cdc6cb10ad0b/dist/index.html)
 
 ### Setup
 

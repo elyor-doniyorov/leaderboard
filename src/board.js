@@ -19,12 +19,10 @@ export default class Board {
 
   createGame = async (name) => {
     const gameName = { name };
-    const url =
-      'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/';
+    const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/';
     const response = await this.fetchApi(url, 'POST', gameName);
     if (this.flag === false) {
-      document.getElementById('errorDiv').textContent =
-        'Bad Request, Please Try Again!!!';
+      document.getElementById('errorDiv').textContent = 'Bad Request, Please Try Again!!!';
       setTimeout(() => {
         document.getElementById('errorDiv').innerHTML = '';
       }, 3000);
@@ -57,17 +55,14 @@ export default class Board {
     const name = document.getElementById('name').value;
     const score = document.getElementById('score').value;
     if (name === '' || score === '') {
-      document.querySelector('.submitDivErr').textContent =
-        'Please provide a value for game name and score';
+      document.querySelector('.submitDivErr').textContent = 'Please provide a value for game name and score';
       setTimeout(() => {
         document.querySelector('.submitDivErr').innerHTML = '';
       }, 1500);
       return false;
     }
     if (this.id !== null) {
-      const url = `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${encodeURIComponent(
-        this.id
-      )}/scores/`;
+      const url = `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${encodeURIComponent(this.id)}/scores/`;
       const newScore = {
         user: document.getElementById('name').value,
         score: document.getElementById('score').value,

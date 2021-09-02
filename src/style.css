@@ -7,7 +7,10 @@
   border-radius: 5px;
 }
 
-button, li , input, #addscorebtn {
+button, 
+li,
+input,
+#addscorebtn {
   font-weight: bolder;
 }
 
@@ -65,7 +68,6 @@ input[type="button"] {
   padding: 5px 15px;
 }
 
-
 .errorDiv,
 .submitDivErr {
   color: red;
@@ -80,7 +82,7 @@ input[type="button"] {
 }
 
 #addscorebtn {
-  margin-right:0;
+  margin-right: 0;
 }
 
 @media (max-width: 417px) {
