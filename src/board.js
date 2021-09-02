@@ -26,7 +26,7 @@ export default class Board {
         "Bad Request, Please Try Again!!!";
       setTimeout(() => {
         document.getElementById("errorDiv").innerHTML = "";
-      }, 3500);
+      }, 3000);
     } else {
       this.setId(response);
     }
