@@ -1,10 +1,22 @@
 .container {
   width: 70%;
   margin: auto;
-  border: 1px solid black;
-  padding: 25px;
-  border-radius: 10px;
+  padding: 20px;
   margin-top: 100px;
+  background-color: rgb(233, 230, 230);
+  border-radius: 5px;
+}
+
+button,
+li,
+input,
+#addscorebtn {
+  font-weight: bolder;
+}
+
+.container > h1 {
+  margin-bottom: 30px;
+  font-size: 40px;
 }
 
 .leaderboard {
@@ -12,61 +24,74 @@
   grid-template-columns: 60% 40%;
 }
 
-.refresh {
-  display: grid;
-  grid-template-columns: 60% 40%;
+.refresh h2 {
+  display: inline;
+  margin-right: 10px;
 }
 
-#refresh-btn {
-  margin-top: 25px;
-}
-
-.scoreList ul {
-  border: 2px solid black;
+.list-scores ul {
+  border: 1px solid black;
   list-style-type: none;
   width: 80%;
-  padding: 0;
+  padding-left: 0;
 }
 
-.addScore-title {
-  margin-bottom: 40px;
+.list-scores li:nth-child(odd) {
+  padding: 7px;
+  background-color: #fff;
 }
 
-.scoreList li:nth-child(odd) {
-  padding: 5px;
-  background-color: lightgrey;
+.list-scores li:nth-child(even) {
+  padding: 7px;
+  background-color: rgb(207, 204, 204);
 }
 
-.scoreList li:nth-child(even) {
-  padding: 5px;
-  background-color: white;
-}
-
-.addScore {
+.add-score {
   padding-right: 10px;
 }
 
-.addScore h2 {
+.add-score h2 {
   margin-top: 0;
 }
 
-.addForm div {
+.form-add div {
   margin-bottom: 30px;
 }
 
 input[type="text"] {
-  padding: 8px 0;
-  width: 60%;
-  margin-bottom: 10px;
+  padding: 10px 0;
+  width: 100%;
 }
 
-input[type="submit"] {
-  margin-top: 8px;
+input[type="button"] {
   float: right;
   padding: 5px 15px;
 }
 
-#submit {
+.errorDiv,
+.submitDivErr {
+  color: red;
+}
+
+#refreshbtn,
+input[type="button"] {
+  color: rgb(2, 2, 2);
+  margin-right: 20%;
   float: right;
-  margin-right: 40%;
+  box-shadow: 3px 3px black;
+}
+
+#addscorebtn {
+  margin-right: 0;
+}
+
+@media (max-width: 417px) {
+  .leaderboard {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .list-scores ul {
+    width: 100%;
+  }
 }

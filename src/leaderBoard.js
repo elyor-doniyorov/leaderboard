@@ -1,58 +1,60 @@
 const leaderBoard = () => {
-  const scores = [
+  const scoresArray = [
     { name: 'Elyor', score: 100 },
     { name: 'Henry', score: 100 },
     { name: 'Ali', score: 100 },
     { name: 'Rosine', score: 100 },
   ];
+  const errorDiv = document.createElement('div');
+  errorDiv.id = 'errorDiv';
+  errorDiv.className = 'errorDiv';
   const container = document.createElement('div');
   container.className = 'container';
-  const leaderboardTitle = document.createElement('h1');
-  leaderboardTitle.textContent = 'Leaderboard';
-  container.appendChild(leaderboardTitle);
+  const leaderBoardHeader = document.createElement('h1');
+  leaderBoardHeader.textContent = 'LeaderBoard';
+  container.appendChild(errorDiv);
+  container.appendChild(leaderBoardHeader);
   const leaderboard = document.createElement('div');
   leaderboard.className = 'leaderboard';
-  const scoresdiv = document.createElement('div');
-  scoresdiv.className = 'scoresdiv';
+  const scores = document.createElement('div');
+  scores.className = 'scores';
   const refresh = document.createElement('div');
   refresh.className = 'refresh';
   const recentScores = document.createElement('h2');
   recentScores.textContent = 'Recent scores';
-  const refreshBtn = document.createElement('div');
-  const refreshBtnInput = document.createElement('input');
-  refreshBtnInput.type = 'button';
-  refreshBtnInput.id = 'refresh-btn';
-  refreshBtnInput.value = 'Refresh';
+  const refreshBtn = document.createElement('button');
+  refreshBtn.id = 'refreshbtn';
+  refreshBtn.textContent = 'Refresh';
   refresh.appendChild(recentScores);
   refresh.appendChild(refreshBtn);
-  refreshBtn.appendChild(refreshBtnInput);
-  scoresdiv.appendChild(refresh);
-  const scoreList = document.createElement('div');
-  scoreList.className = 'scoreList';
-  const list = document.createElement('ul');
-  scores.forEach((s) => {
+  scores.appendChild(refresh);
+  const listScores = document.createElement('div');
+  listScores.className = 'list-scores';
+  const ulList = document.createElement('ul');
+  ulList.id = 'ulList';
+  scoresArray.forEach((element) => {
     const items = document.createElement('li');
-    items.textContent = `${s.name}:${s.score}`;
-    list.appendChild(items);
+    items.id = 'scoresList-items';
+    items.className = 'scoresList-items';
+    items.textContent = `${`${element.name}:${element.score}`}`;
+    ulList.appendChild(items);
   });
-  scoreList.appendChild(list);
-  scoresdiv.appendChild(scoreList);
-  leaderboard.appendChild(scoresdiv);
-
+  listScores.appendChild(ulList);
+  scores.appendChild(listScores);
+  leaderboard.appendChild(scores);
   const addScore = document.createElement('div');
   addScore.className = 'add-score';
-  const addScoreTitle = document.createElement('h2');
-  addScoreTitle.className = 'addScore-title';
-  addScoreTitle.textContent = 'Add Your Scores';
-  const addScoreForm = document.createElement('div');
-  addScoreForm.className = 'add-form';
-  const addForm = document.createElement('form');
+  const addScoreHeader = document.createElement('h2');
+  addScoreHeader.textContent = 'Add Your Scores';
+  const formAddDiv = document.createElement('div');
+  formAddDiv.className = 'form-add';
+  const formAdd = document.createElement('form');
   const playerNameDiv = document.createElement('div');
-  const playername = document.createElement('input');
-  playername.type = 'text';
-  playername.id = 'name';
-  playername.placeholder = 'Your name';
-  playerNameDiv.appendChild(playername);
+  const playerName = document.createElement('input');
+  playerName.type = 'text';
+  playerName.id = 'name';
+  playerName.placeholder = 'Your name';
+  playerNameDiv.appendChild(playerName);
   const playerScoreDiv = document.createElement('div');
   const playerScore = document.createElement('input');
   playerScore.type = 'text';
@@ -62,18 +64,21 @@ const leaderBoard = () => {
   const submitBtnDiv = document.createElement('div');
   const submitBtn = document.createElement('input');
   submitBtn.type = 'button';
-  submitBtn.id = 'submit';
+  submitBtn.id = 'addscorebtn';
   submitBtn.value = 'Submit';
+  const submitDivErr = document.createElement('div');
+  submitDivErr.className = 'submitDivErr';
   submitBtnDiv.appendChild(submitBtn);
-  addForm.appendChild(playerNameDiv);
-  addForm.appendChild(playerScoreDiv);
-  addForm.appendChild(submitBtnDiv);
-  addScoreForm.appendChild(addForm);
-  addScore.appendChild(addScoreTitle);
-  addScore.appendChild(addScoreForm);
+  formAdd.appendChild(playerNameDiv);
+  formAdd.appendChild(playerScoreDiv);
+  formAdd.appendChild(submitDivErr);
+  formAddDiv.appendChild(formAdd);
+  formAddDiv.appendChild(submitBtnDiv);
+  addScore.appendChild(addScoreHeader);
+  addScore.appendChild(formAddDiv);
+  leaderboard.appendChild(scores);
   leaderboard.appendChild(addScore);
   container.appendChild(leaderboard);
-
   return container;
 };
 
